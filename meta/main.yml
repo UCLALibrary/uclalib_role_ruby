@@ -1,7 +1,6 @@
 ---
 
-dependencies:
-  - src: git+https://github.com/UCLALibrary/uclalib_role_uclalibrepo.git
+dependencies: []
 
 galaxy_info:
   author: Stephen Gurnick - https://github.com/sgurnick
