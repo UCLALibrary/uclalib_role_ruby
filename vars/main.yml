@@ -1,0 +1,4 @@
+---
+
+
+ruby_minor_version: '{{ ruby_version | regex_replace("^(\d+\.\d+)\.\d.*$", "\1") }}'
