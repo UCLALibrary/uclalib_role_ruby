@@ -1,13 +1,14 @@
 ---
 
-- name: Pull in environment variables
-  include_vars: "{{ ansible_distribution }}.yml"
+- name: Pull in OS-specific environment variables
+  include_vars: "rhel{{ ansible_distribution_major_version }}.yml"
 
 - name: Install Ruby RPM
   yum:
     name: "ruby-{{ ruby_version }}"
     state: present
     disablerepo: "{{ repo_name }}"
+    disable_excludes: "all"
 
 - name: Install/Update Base Ruby Gems
   command: >
