@@ -1,6 +1,13 @@
 ---
 
+# Defines whether to use the RHEL-provided version of Ruby 
+# or the custom-built Ruby in the uclalib yum repo
+# Valid options: 
+# - rhel
+# - uclalib
+ruby_yum_repo: "rhel"
+
 # Defines the version of ruby to install
-# This version of ruby must match with an RPM file that exists within the UCLA Library's Yum Repo
-# Specifiy this during role execution time - otherwise will use the default below
-ruby_version: "2.5.5"
+# This version of ruby must match a version that exists in
+# the UCLA Library's Yum Repo or RHEL Yum Repo
+ruby_version: "2.5.9"
