@@ -1,0 +1,8 @@
+--- 
+
+- name: Install Ruby RPM
+  yum:
+    name: "ruby-{{ ruby_version }}"
+    state: present
+    disablerepo: "{{ disable_repo_name }}"
+    disable_excludes: "all"

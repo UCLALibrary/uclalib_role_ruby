@@ -3,12 +3,13 @@
 - name: Pull in OS-specific environment variables
   include_vars: "rhel{{ ansible_distribution_major_version }}.yml"
 
-- name: Install Ruby RPM
-  yum:
-    name: "ruby-{{ ruby_version }}"
-    state: present
-    disablerepo: "{{ repo_name }}"
-    disable_excludes: "all"
+- name: Use RHEL yum repo for Ruby install 
+  include_tasks: "rhel_yum.yml"
+  when: ruby_yum_repo == 'rhel'
+
+- name: Use uclalib yum repo for Ruby install
+  include_tasks: "uclalib_yum.yml"
+  when: ruby_yum_repo == 'uclalib'
 
 - name: Install/Update Base Ruby Gems
   command: >
