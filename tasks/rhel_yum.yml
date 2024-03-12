@@ -1,5 +1,10 @@
 --- 
 
+- name: Enable ruby module
+  command:
+    cmd: yum module enable ruby:{{ ruby_minor_version }} --assumeyes
+  changed_when: true
+
 - name: Install Ruby RPM
   yum:
     name: "ruby-{{ ruby_version }}"
