@@ -1,0 +1,13 @@
+# This file contains ignores rule violations for ansible-lint
+defaults/main.yml yaml[new-line-at-end-of-file]
+defaults/main.yml yaml[trailing-spaces]
+meta/main.yml yaml[indentation]
+tasks/main.yml fqcn[action-core]
+tasks/main.yml no-changed-when
+tasks/main.yml yaml[trailing-spaces]
+tasks/rhel_yum.yml command-instead-of-module
+tasks/rhel_yum.yml fqcn[action-core]
+tasks/rhel_yum.yml yaml[trailing-spaces]
+tasks/uclalib_yum.yml fqcn[action-core]
+tasks/uclalib_yum.yml yaml[new-line-at-end-of-file]
+tasks/uclalib_yum.yml yaml[trailing-spaces]
