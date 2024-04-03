@@ -14,3 +14,4 @@
 - name: Install/Update Base Ruby Gems
   command: >
     gem update --system
+  when: ruby_update_gems

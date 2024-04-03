@@ -11,3 +11,6 @@ ruby_yum_repo: "rhel"
 # This version of ruby must match a version that exists in
 # the UCLA Library's Yum Repo or RHEL Yum Repo
 ruby_version: "2.5.9"
+
+# Update system gems?
+ruby_update_gems: true
