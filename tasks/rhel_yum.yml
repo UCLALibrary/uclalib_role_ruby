@@ -7,6 +7,8 @@
 
 - name: Install Ruby RPM
   yum:
-    name: "ruby-{{ ruby_version }}"
+    name:
+      - ruby
+      - ruby-devel
     state: present
     disable_excludes: "all"
