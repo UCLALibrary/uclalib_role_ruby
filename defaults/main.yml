@@ -13,4 +13,4 @@ ruby_yum_repo: "rhel"
 ruby_version: "2.5.9"
 
 # Update system gems?
-ruby_update_gems: true
+ruby_update_gems: false
