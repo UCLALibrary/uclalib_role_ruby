@@ -10,5 +10,6 @@
     name:
       - ruby
       - ruby-devel
+      - rubygem-bundler
     state: present
     disable_excludes: "all"
